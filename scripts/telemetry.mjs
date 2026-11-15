@@ -64,9 +64,26 @@ function summarize(user) {
     langCount: bytes.size,
     weekly,
     langs,
+    days,
+    ...trainingLog(days),
     recent: user.repositories.nodes.filter((r) => r.name !== LOGIN).slice(0, 5),
   };
 }
+
+function trainingLog(days) {
+  let longestStreak = 0;
+  let run = 0;
+  for (const d of days) {
+    run = d.contributionCount > 0 ? run + 1 : 0;
+    longestStreak = Math.max(longestStreak, run);
+  }
+  const active = days.filter((d) => d.contributionCount > 0);
+  const bestDay = days.reduce((best, d) => (d.contributionCount > best.contributionCount ? d : best), days[0]);
+  const volume = active.reduce((sum, d) => sum + d.contributionCount, 0);
+  return { longestStreak, bestDay, avgPerSession: active.length ? volume / active.length : 0 };
+}
+
+const shortDate = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
 // Tyre compound colours, softest first.
 const COMPOUNDS = [
@@ -152,6 +169,149 @@ function renderSvg(s) {
 `;
 }
 
+// Isometric contribution calendar for the last 26 weeks, drawn back to front.
+const ISO_LEVELS = [
+  ['#2a2a36', '#1f1f29', '#18181f'],
+  ['#5c1210', '#45100e', '#360c0b'],
+  ['#9b1410', '#7a100d', '#5e0c0a'],
+  ['#d8140c', '#ad100a', '#860c08'],
+  ['#ff3b30', '#d6261c', '#a81b13'],
+];
+
+function renderCalendar(s) {
+  const weeks = [];
+  for (let i = 0; i < s.days.length; i += 7) weeks.push(s.days.slice(i, i + 7));
+  const recent = weeks.slice(-26);
+  const max = Math.max(1, ...recent.flat().map((d) => d.contributionCount));
+  const [hw, hh, ox, oy, tall] = [14, 8, 150, 140, 72];
+
+  const columns = recent.map((week, w) => {
+    const bars = week.map((day, d) => {
+      const n = day.contributionCount;
+      const level = n === 0 ? 0 : Math.min(4, Math.ceil((n / max) * 4));
+      const [top, left, right] = ISO_LEVELS[level];
+      const h = 3 + (n / max) * tall;
+      const x = ox + (w - d) * hw;
+      const y = oy + (w + d) * hh;
+      const p = (pts) => pts.map(([px, py]) => `${px.toFixed(1)},${py.toFixed(1)}`).join(' ');
+      return `<polygon points="${p([[x - hw, y - h], [x, y - h + hh], [x, y + hh], [x - hw, y]])}" fill="${left}"/>`
+        + `<polygon points="${p([[x, y - h + hh], [x + hw, y - h], [x + hw, y], [x, y + hh]])}" fill="${right}"/>`
+        + `<polygon points="${p([[x, y - h - hh], [x + hw, y - h], [x, y - h + hh], [x - hw, y - h]])}" fill="${top}"/>`;
+    });
+    // Within a week, later days sit closer to the viewer, so draw them last.
+    return `<g class="wk" style="animation-delay:${(w * 0.035).toFixed(3)}s">${bars.join('')}</g>`;
+  });
+
+  const period = recent.flat();
+  const total = period.reduce((sum, d) => sum + d.contributionCount, 0);
+  const best = period.reduce((b, d) => (d.contributionCount > b.contributionCount ? d : b), period[0]);
+  const tiles = [
+    ['RACES ENTERED · 26 WKS', fmt(total), '#ff2a1f'],
+    ['POLE POSITION · BEST DAY', `${fmt(best.contributionCount)} · ${shortDate(best.date)}`, '#a855f7'],
+    ['DAYS ON TRACK · 26 WKS', fmt(period.filter((d) => d.contributionCount > 0).length), '#ffd12e'],
+  ].map(([label, value, color], i) => `<g class="tile" style="animation-delay:${0.9 + i * 0.12}s">
+      <rect x="640" y="${110 + i * 74}" width="4" height="52" fill="${color}"/>
+      <text class="mono" x="660" y="${128 + i * 74}" font-size="12" fill="#9a9aab" letter-spacing="1.5">${label}</text>
+      <text class="sans" x="660" y="${158 + i * 74}" font-size="28" font-weight="900" font-style="italic" fill="#ffffff">${esc(value)}</text>
+    </g>`).join('\n');
+  const legend = ISO_LEVELS.map(([top], i) => `<rect x="${960 + i * 22}" y="352" width="16" height="16" rx="3" fill="${top}"/>`).join('');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="t">
+  <title id="t">3D contribution calendar for ${esc(LOGIN)}: ${fmt(total)} contributions over the last 26 weeks.</title>
+  <defs>
+    <clipPath id="frame"><rect width="1200" height="400" rx="16"/></clipPath>
+    <style>
+      .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+      .sans{font-family:'Titillium Web','Formula1 Display','Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+      .wk,.tile{animation:drop .5s cubic-bezier(.2,.8,.2,1) both}
+      @keyframes drop{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:none}}
+      @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+    </style>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="400" fill="#15151e"/>
+    <text class="sans" x="32" y="46" font-size="22" font-weight="900" font-style="italic" fill="#ffffff">SEASON CALENDAR</text>
+    <text class="mono" x="34" y="70" font-size="12" fill="#9a9aab" letter-spacing="2">CONTRIBUTIONS · LAST 26 WEEKS · EACH TOWER = ONE DAY</text>
+    ${columns.join('\n    ')}
+    ${tiles}
+    <text class="mono" x="950" y="364" font-size="11" fill="#9a9aab" text-anchor="end">LIGHTS OFF</text>
+    ${legend}
+    <text class="mono" x="1072" y="364" font-size="11" fill="#9a9aab">FULL THROTTLE</text>
+  </g>
+</svg>
+`;
+}
+
+// Barbell that loads its plates and hits one double, beside coding "personal records".
+function renderWeightRoom(s) {
+  const plates = [[18, 150, '#e10600'], [16, 150, '#2f80ff'], [14, 122, '#ffd12e'], [12, 100, '#39d353']];
+  let offset = 0;
+  const side = (dir) => plates.map(([w, h, color], i) => {
+    const x = dir < 0 ? 196 - offset - w : 404 + offset;
+    offset += w + 3;
+    return `<rect class="plate ${dir < 0 ? 'pl' : 'pr'}" style="animation-delay:${(0.2 + i * 0.18).toFixed(2)}s" x="${x}" y="${150 - h / 2}" width="${w}" height="${h}" rx="3" fill="${color}"/>`;
+  }).join('');
+  const left = side(-1);
+  offset = 0;
+  const right = side(1);
+
+  const rows = [
+    ['HEAVIEST SESSION · BEST DAY', `${fmt(s.bestDay.contributionCount)} reps · ${shortDate(s.bestDay.date)}`],
+    ['LONGEST STREAK · NO REST DAYS', `${fmt(s.longestStreak)} days`],
+    ['TRAINING DAYS · 12M', fmt(s.activeDays)],
+    ['AVG REPS PER SESSION', s.avgPerSession.toFixed(1)],
+  ].map(([label, value], i) => `<g class="row" style="animation-delay:${1 + i * 0.1}s">
+      <text class="mono" x="650" y="${108 + i * 44}" font-size="12" fill="#9a9aab" letter-spacing="1.5">${label}</text>
+      <text class="mono" x="1168" y="${108 + i * 44}" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">${esc(value)}</text>
+      <line x1="650" x2="1168" y1="${122 + i * 44}" y2="${122 + i * 44}" stroke="#262633"/>
+    </g>`).join('\n');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="t">
+  <title id="t">The weight room: a barbell loads up and lifts. Coding personal records: best day ${fmt(s.bestDay.contributionCount)} contributions, longest streak ${fmt(s.longestStreak)} days.</title>
+  <defs>
+    <clipPath id="frame"><rect width="1200" height="300" rx="16"/></clipPath>
+    <style>
+      .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+      .sans{font-family:'Titillium Web','Formula1 Display','Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+      .plate{animation:.45s cubic-bezier(.2,.8,.2,1) both}
+      .pl{animation-name:inl}.pr{animation-name:inr}
+      @keyframes inl{from{opacity:0;transform:translateX(-140px)}to{opacity:1;transform:none}}
+      @keyframes inr{from{opacity:0;transform:translateX(140px)}to{opacity:1;transform:none}}
+      .lift{animation:lift 1.4s ease-in-out 1.2s 2 both}
+      @keyframes lift{0%,100%{transform:none}45%,60%{transform:translateY(-38px)}}
+      .shadow{transform-box:fill-box;transform-origin:center;animation:shrink 1.4s ease-in-out 1.2s 2 both}
+      @keyframes shrink{0%,100%{transform:none;opacity:.5}45%,60%{transform:scaleX(.75);opacity:.25}}
+      .row{animation:in .5s ease-out both}
+      @keyframes in{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+      @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+    </style>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="300" fill="#15151e"/>
+    <rect width="600" height="300" fill="#101017"/>
+    <text class="sans" x="32" y="46" font-size="22" font-weight="900" font-style="italic" fill="#ffffff">THE WEIGHT ROOM</text>
+    <text class="mono" x="34" y="70" font-size="12" fill="#9a9aab" letter-spacing="2">OFF TRACK · TRAINING DAY</text>
+    <rect x="40" y="262" width="520" height="6" rx="3" fill="#262633"/>
+    <ellipse class="shadow" cx="300" cy="258" rx="230" ry="6" fill="#000"/>
+    <g transform="translate(0 30)">
+      <g class="lift">
+        <rect x="70" y="146" width="460" height="8" rx="4" fill="#b9b9c6"/>
+        <rect x="70" y="141" width="70" height="18" rx="4" fill="#d8d8e0"/>
+        <rect x="460" y="141" width="70" height="18" rx="4" fill="#d8d8e0"/>
+        <rect x="196" y="138" width="8" height="24" rx="2" fill="#6b6b7b"/>
+        <rect x="396" y="138" width="8" height="24" rx="2" fill="#6b6b7b"/>
+        ${left}${right}
+      </g>
+    </g>
+    <text class="sans" x="650" y="46" font-size="22" font-weight="900" font-style="italic" fill="#ffffff">PERSONAL RECORDS</text>
+    <text class="mono" x="652" y="70" font-size="12" fill="#e10600" letter-spacing="2">THE OTHER KIND OF PR · ONE REP = ONE CONTRIBUTION</text>
+    ${rows}
+    <text class="mono" x="650" y="282" font-size="12" fill="#6b6b7b">// progressive overload, applied to code</text>
+  </g>
+</svg>
+`;
+}
+
 function renderPitStops(recent) {
   return recent.map((r) => {
     const date = new Date(r.pushedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -162,6 +322,8 @@ function renderPitStops(recent) {
 
 const stats = summarize(await fetchUser());
 await writeFile(new URL('../assets/telemetry.svg', import.meta.url), renderSvg(stats));
+await writeFile(new URL('../assets/calendar.svg', import.meta.url), renderCalendar(stats));
+await writeFile(new URL('../assets/weight-room.svg', import.meta.url), renderWeightRoom(stats));
 
 const readmeUrl = new URL('../README.md', import.meta.url);
 const readme = await readFile(readmeUrl, 'utf8');

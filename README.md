@@ -22,7 +22,7 @@ team:        Simon Fraser University · B.Sc. Computing Science, Minor in Busine
 current:     Research Assistant · CRA UR2PhD @ SFU, 120–240 fps facial-landmark tracking for biomechanics
 last_stint:  Junior Software Developer (Co-op) · Coriolis Technologies, Django + LangGraph AI pipelines
 strengths:   [full-stack TypeScript, Python backends, LLM evaluation, caching & rate limiting, testing]
-off_track:   Formula 1 telemetry nerd. I build tools for it (see F1 Heads-Up Display below)
+off_track:   [Formula 1 telemetry nerd, weight room regular 🏋️, builder of software for gym staff]
 seeking:     Software Engineering Internship · Spring 2027 🟢
 ```
 
@@ -44,6 +44,15 @@ seeking:     Software Engineering Internship · Spring 2027 🟢
 | **R2** | [**F1 Heads-Up Display**](https://github.com/DaiwikMarrott/F1-Display) 🏎️ | React · TypeScript · Vite · OpenF1 API | Live telemetry and deterministic race replay across **19 components / 7 hooks**. Per-endpoint caching, request deduplication and shared HTTP 429 cooldowns; **27** test suites |
 | **R3** | [**Marrotts Travel Express**](https://github.com/DaiwikMarrott/Marrotts-Travel-Express-) | React · Node · Express · Firebase · Tailwind | **55+** components for group trip planning. Gemini behind an Express proxy with a model allow-list, per-IP rate limits and a 256 KB request cap |
 | **R4** | [**Grid Anomaly Detector**](https://github.com/Priyanshsarvaiya/Analyzing-Electricity-Grids-using-Markov-Models) | Python · R · Markov chains · pandas | Models cyberattack patterns in power-grid data to flag anomalies |
+
+## 🏋️ Off track: the weight room
+
+<img src="assets/weight-room.svg" width="100%" alt="The weight room: a barbell loads plates and lifts, next to coding personal records (best day, longest streak, training days)." />
+
+When I'm not at a keyboard, I'm under a barbell. I'm a recipient of the **SFU Recreation Leadership Scholarship**, and I've written software for the people who run the gym:
+
+- **FitForge** <sub>(private)</sub>: an anonymous communication platform for gym staff with role-based access for coordinators, senior recreation leaders, weight room supervisors and recreation leaders. React (Expo) · TypeScript · Firebase.
+- **Weightroom Supervisor Task Manager** <sub>(private)</sub>: a desktop logbook that replaces paper task sheets for weight room supervisors. Staff initial off equipment checks and maintenance tasks. C# · WPF (MVVM) · EF Core · SQLite.
 
 <img src="assets/kerb.svg" width="100%" alt="" />
 
@@ -71,23 +80,29 @@ seeking:     Software Engineering Internship · Spring 2027 🟢
 
 ## 📡 Telemetry
 
-<img src="assets/telemetry.svg" width="100%" alt="GitHub telemetry: contributions, commits, pull requests, best week, streak, and top languages, refreshed daily." />
+<img src="assets/telemetry.svg" width="100%" alt="GitHub telemetry: contributions, commits, best week, days active, repos and top languages, refreshed daily." />
 
-<details>
-<summary><b>🛞 Contribution Grand Prix</b>: watch the car lap my contribution graph</summary>
-<br/>
-<img src="https://raw.githubusercontent.com/DaiwikMarrott/DaiwikMarrott/output/f1-track.svg" width="100%" alt="Animated car eating the contribution graph" />
-</details>
+### 🗓️ Season calendar
+
+<img src="assets/calendar.svg" width="100%" alt="3D isometric contribution calendar for the last 26 weeks, with total contributions, best day and active days." />
+
+### 🛞 Activity graph
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DaiwikMarrott/DaiwikMarrott/output/f1-track-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DaiwikMarrott/DaiwikMarrott/output/f1-track.svg" />
+  <img src="https://raw.githubusercontent.com/DaiwikMarrott/DaiwikMarrott/output/f1-track-dark.svg" width="100%" alt="Animated contribution graph: a red car laps the grid and eats each day's contributions." />
+</picture>
 
 ### 🔁 Latest pit stops
 <!-- PITSTOPS:START -->
-- 🔧 [**Room_tracker**](https://github.com/DaiwikMarrott/Room_tracker) <sub>· Nov 1, 2026</sub>
+- 🔧 [**Room_tracker**](https://github.com/DaiwikMarrott/Room_tracker) <sub>· Oct 31, 2026</sub>
 - 🔧 [**TracePilot**](https://github.com/DaiwikMarrott/TracePilot) <sub>· Oct 25, 2026</sub>
-- 🔧 [**CMPT372---ass3-**](https://github.com/DaiwikMarrott/CMPT372---ass3-) <sub>· Aug 10, 2026</sub>
-- 🔧 [**SecureThings_272_GP**](https://github.com/DaiwikMarrott/SecureThings_272_GP) — Group Project for CMPT272 <sub>· Dec 4, 2024</sub>
-- 🔧 [**Database_Assignment2**](https://github.com/DaiwikMarrott/Database_Assignment2) <sub>· Feb 26, 2024</sub>
+- 🔧 [**CMPT372---ass3-**](https://github.com/DaiwikMarrott/CMPT372---ass3-) <sub>· Aug 9, 2026</sub>
+- 🔧 [**SecureThings_272_GP**](https://github.com/DaiwikMarrott/SecureThings_272_GP) — Group Project for CMPT272 <sub>· Dec 3, 2024</sub>
+- 🔧 [**Database_Assignment2**](https://github.com/DaiwikMarrott/Database_Assignment2) <sub>· Feb 25, 2024</sub>
 <!-- PITSTOPS:END -->
 
 <img src="assets/chequered-flag.svg" width="100%" alt="Chequered flag: thanks for visiting the paddock. Seeking a Spring 2027 Software Engineering internship." />
 
-<sub>Telemetry and pit stops refresh daily via GitHub Actions. All animations are self-hosted CSS-in-SVG (transform/opacity only, no GIFs or JS) and respect <code>prefers-reduced-motion</code>.</sub>
+<sub>Telemetry, calendar, weight-room PRs and pit stops refresh daily via GitHub Actions. All animations are self-hosted CSS-in-SVG (transform/opacity only, no GIFs or JS) and respect <code>prefers-reduced-motion</code>.</sub>
