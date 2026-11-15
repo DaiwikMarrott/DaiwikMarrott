@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="10" viewBox="0 0 1200 10" role="presentation">
+  <defs>
+    <pattern id="k" width="60" height="10" patternUnits="userSpaceOnUse">
+      <rect width="60" height="10" fill="#ffffff"/>
+      <path d="M0 0h30l-6 10H-6z M60 0h30l-6 10H54z" fill="#e10600"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="10" rx="2" fill="url(#k)"/>
+</svg>
