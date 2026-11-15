@@ -49,12 +49,12 @@
     </g>
 <g class="row" style="animation-delay:1.2s">
       <text class="mono" x="650" y="196" font-size="12" fill="#9a9aab" letter-spacing="1.5">TRAINING DAYS · 12M</text>
-      <text class="mono" x="1168" y="196" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">14</text>
+      <text class="mono" x="1168" y="196" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">15</text>
       <line x1="650" x2="1168" y1="210" y2="210" stroke="#262633"/>
     </g>
 <g class="row" style="animation-delay:1.3s">
       <text class="mono" x="650" y="240" font-size="12" fill="#9a9aab" letter-spacing="1.5">AVG REPS PER SESSION</text>
-      <text class="mono" x="1168" y="240" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">4.3</text>
+      <text class="mono" x="1168" y="240" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">4.1</text>
       <line x1="650" x2="1168" y1="254" y2="254" stroke="#262633"/>
     </g>
     <text class="mono" x="650" y="282" font-size="12" fill="#6b6b7b">// progressive overload, applied to code</text>
