@@ -96,8 +96,8 @@ When I'm not at a keyboard, I'm under a barbell. I'm a recipient of the **SFU Re
 
 ### 🔁 Latest pit stops
 <!-- PITSTOPS:START -->
+- 🔧 [**TracePilot**](https://github.com/DaiwikMarrott/TracePilot) <sub>· Nov 20, 2026</sub>
 - 🔧 [**Room_tracker**](https://github.com/DaiwikMarrott/Room_tracker) <sub>· Nov 1, 2026</sub>
-- 🔧 [**TracePilot**](https://github.com/DaiwikMarrott/TracePilot) <sub>· Oct 25, 2026</sub>
 - 🔧 [**CMPT372---ass3-**](https://github.com/DaiwikMarrott/CMPT372---ass3-) <sub>· Aug 10, 2026</sub>
 - 🔧 [**SecureThings_272_GP**](https://github.com/DaiwikMarrott/SecureThings_272_GP) — Group Project for CMPT272 <sub>· Dec 4, 2024</sub>
 - 🔧 [**Database_Assignment2**](https://github.com/DaiwikMarrott/Database_Assignment2) <sub>· Feb 26, 2024</sub>
