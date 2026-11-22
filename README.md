@@ -5,7 +5,7 @@
 <p align="center">
   <a href="mailto:daiwikmarrott4@gmail.com"><img src="https://img.shields.io/badge/Email-daiwikmarrott4%40gmail.com-E10600?style=for-the-badge&logo=gmail&logoColor=white&labelColor=15151E" alt="Email" /></a>
   <a href="https://www.linkedin.com/in/daiwik-marrott"><img src="https://img.shields.io/badge/LinkedIn-daiwik--marrott-E10600?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=15151E" alt="LinkedIn" /></a>
-  <a href="https://thriving-salamander-9e9472.netlify.app"><img src="https://img.shields.io/badge/Portfolio-Visit-E10600?style=for-the-badge&logo=netlify&logoColor=white&labelColor=15151E" alt="Portfolio" /></a>
+  <a href="https://daiwikmarrott.com"><img src="https://img.shields.io/badge/Portfolio-daiwikmarrott.com-E10600?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=15151E" alt="Portfolio: daiwikmarrott.com" /></a>
 </p>
 
 > [!IMPORTANT]
@@ -18,11 +18,14 @@
 
 ```yaml
 driver:      Daiwik Marrott  #09
-team:        Simon Fraser University · B.Sc. Computing Science, Minor in Business (grad Apr 2028)
+team:        Simon Fraser University · B.Sc. Computing Science, Minor in Business (grad Aug 2027)
 current:     Research Assistant · CRA UR2PhD @ SFU, 120–240 fps facial-landmark tracking for biomechanics
 last_stint:  Junior Software Developer (Co-op) · Coriolis Technologies, Django + LangGraph AI pipelines
+also:        Weight Room Supervisor @ SFU Recreation · Senior Customer Service Specialist @ Fresh St. Market
 strengths:   [full-stack TypeScript, Python backends, LLM evaluation, caching & rate limiting, testing]
+people:      [first-line tech support, 150+ members served, trained & mentored new staff and volunteers]
 off_track:   [Formula 1 telemetry nerd, weight room regular 🏋️, builder of software for gym staff]
+paddock:     daiwikmarrott.com
 seeking:     Software Engineering Internship · Spring 2027 🟢
 ```
 
@@ -32,9 +35,14 @@ seeking:     Software Engineering Internship · Spring 2027 🟢
 
 | Pos | Team | Seat | Season | Fastest lap |
 |:---:|------|------|--------|-------------|
-| 🟣 **P1** | **CRA UR2PhD · Simon Fraser University** | Research Assistant | Sept 2026 – now | Extended a MediaPipe pipeline to 120–240 fps video to catch **65 ms** articulatory transitions that 30 fps webcams miss, with a **0.5 mm** residual gate |
-| 🟢 **P2** | **Coriolis Technologies** | Junior Software Developer (Co-op) | May – Dec 2025 | Built a **LangGraph** pipeline (Gemini + OpenAI) that generates, verifies and synthesizes intern guidance. Cached **5 AI workflows** and shipped multi-tenant Django 5.2 features |
-| 🟡 **P3** | **Fraser International College** | IT Squad Leader | Sept – Dec 2022 | Fixed device, network and OS issues for students, faculty and staff, and ran software workshops for non-technical users |
+| 🟣 **P1** | **CRA UR2PhD · Simon Fraser University** | Research Assistant | Sept 2026 – now | Extended a MediaPipe pipeline to 120–240 fps video to catch **65 ms** articulatory transitions that 30 fps webcams miss, mapping **17 landmarks** onto a biomechanical face model with a **0.5 mm** residual gate |
+| 🟢 **P2** | **UpSmart Solutions** | Cyber Security Associate (Co-op) | Sept – Dec 2025 | SOC analyst training on the Managed Security Services team. Built a Kali/Windows lab with a **Wazuh SIEM**, analyzed captures in Wireshark, and wrote firewall-log-to-SIEM use cases |
+| 🟢 **P3** | **Coriolis Technologies** | Junior Software Developer (Co-op) | May – Dec 2025 | Built a **LangGraph** pipeline (Gemini + OpenAI) that generates, verifies and synthesizes intern guidance. Cached **5 AI workflows** and shipped multi-tenant Django 5.2 features |
+| 🟡 **P4** | **Fraser International College** | IT Squad Leader | Sept 2023 – Apr 2024 | First point of contact for **100+** students and staff across Windows, macOS, iOS and Android. Built a Google Forms + Excel-macro ticketing workflow and ran cybersecurity workshops |
+| 🟡 **P5** | **Fresh St. Market · Vancouver House** | Senior Customer Service Specialist | Sept 2023 – now | **200+** daily POS transactions with accurate cash handling. Diagnoses register glitches and trained new cashiers on POS troubleshooting over **1.5 years** |
+| 🟡 **P6** | **SFU Recreation Services** | Weight Room Supervisor | May 2023 – now | First point of contact for **150+** members. Runs safety checks, troubleshoots Fusion software, mentored **5** volunteers and builds weekly Excel membership reports |
+| ⚪ **P7** | **Fraser International College** | Senior Orientation Leader | Apr – Sept 2023 | Welcomed **1,200+** international students, triaged and escalated student concerns, and interviewed Orientation Leader candidates |
+| ⚪ **P8** | **Fraser International College** | Orientation Leader | Sept 2022 – Apr 2023 | Led sessions for **150+** new students each term and launched a peer-mentorship initiative |
 
 ## 🏁 Grand Prix calendar · selected projects
 
@@ -42,8 +50,16 @@ seeking:     Software Engineering Internship · Spring 2027 🟢
 |:-----:|------------|-------|-------------|
 | **R1** | [**TracePilot**](https://github.com/DaiwikMarrott/TracePilot) | React · TypeScript · Express · SQLite · Claude API | Side-by-side evaluation console for versioned Claude prompts. SSE streaming with cancellation, timeouts and bounded retries; fixture-based scoring of latency and token usage; Vitest + MSW chaos tests |
 | **R2** | [**F1 Heads-Up Display**](https://github.com/DaiwikMarrott/F1-Display) 🏎️ | React · TypeScript · Vite · OpenF1 API | Live telemetry and deterministic race replay across **19 components / 7 hooks**. Per-endpoint caching, request deduplication and shared HTTP 429 cooldowns; **27** test suites |
-| **R3** | [**Marrotts Travel Express**](https://github.com/DaiwikMarrott/Marrotts-Travel-Express-) | React · Node · Express · Firebase · Tailwind | **55+** components for group trip planning. Gemini behind an Express proxy with a model allow-list, per-IP rate limits and a 256 KB request cap |
-| **R4** | [**Grid Anomaly Detector**](https://github.com/Priyanshsarvaiya/Analyzing-Electricity-Grids-using-Markov-Models) | Python · R · Markov chains · pandas | Models cyberattack patterns in power-grid data to flag anomalies |
+| **R3** | [**Courtyard Pulse**](https://github.com/DaiwikMarrott/Room_tracker) | React Native · Expo · TypeScript · SQLite | Offline-first app tracking visits for **41** residence rooms, with priorities, bulk updates and CSV export through the native share sheet; **10** Vitest tests |
+| **R4** | [**Self-Updating GitHub Profile**](https://github.com/DaiwikMarrott/DaiwikMarrott) | Node.js · GitHub GraphQL API · GitHub Actions | This page. A Node script turns GraphQL contribution data into animated SVGs, regenerated daily by two scheduled workflows |
+| **R5** | **ResQPlate** <sub>(team repo)</sub> | TypeScript · React · Express · Drizzle · PostgreSQL | Food-rescue platform (CMPT 372). Built the seeker browse/reserve flow and grew the backend suite from **~84 to ~200** tests |
+| **R6** | **Marrotts Travel Express** <sub>(private)</sub> | React · Node · Express · Firebase · Tailwind | **55+** components for group trip planning. Gemini behind an Express proxy with a model allow-list, per-IP rate limits and a 256 KB request cap |
+| **R7** | [**HTTPS Reverse-Proxy Deployment**](https://github.com/DaiwikMarrott/CMPT372---ass3-) | Nginx · Google Cloud · Express · pm2 | Nginx TLS front end on a GCP Ubuntu VM reverse-proxying an Express app, with HTTP→HTTPS redirects and a Basic-Auth private route |
+| **R8** | [**Grid Anomaly Detector**](https://github.com/Priyanshsarvaiya/Analyzing-Electricity-Grids-using-Markov-Models) | Python · R · Markov chains · pandas | Models cyberattack patterns in power-grid data to flag anomalies |
+| **R9** | [**SecureThings 9-1-1 Reporting**](https://github.com/DaiwikMarrott/SecureThings_272_GP) | JavaScript · Bootstrap · Leaflet | 5-person team app. Led a **1,200+** line Bootstrap UI overhaul and built the first Leaflet map features |
+| **R10** | [**Student Records Web App**](https://github.com/DaiwikMarrott/CMPT276-Assignment-2) | Java 17 · Spring Boot 3 · PostgreSQL · Docker | Full-CRUD records app with JPA and Thymeleaf, containerized with a multi-stage Docker build |
+
+<sub>Full portfolio with screenshots at <a href="https://daiwikmarrott.com">daiwikmarrott.com</a>.</sub>
 
 ## 🏋️ Off track: the weight room
 
@@ -59,9 +75,10 @@ When I'm not at a keyboard, I'm under a barbell. I'm a recipient of the **SFU Re
 ## 🔧 Car setup
 
 <p>
-  <img src="https://skillicons.dev/icons?i=ts,js,py,java,c,cpp,r,html,css&theme=dark" alt="Languages: TypeScript, JavaScript, Python, Java, C, C++, R, HTML, CSS" /><br/>
-  <img src="https://skillicons.dev/icons?i=react,nodejs,express,django,flask,spring,tailwind,vite&theme=dark" alt="Frameworks: React, Node.js, Express, Django, Flask, Spring Boot, Tailwind, Vite" /><br/>
-  <img src="https://skillicons.dev/icons?i=postgres,sqlite,mongodb,firebase,docker,git,gitlab,vitest,pytorch&theme=dark" alt="Data and tooling: PostgreSQL, SQLite, MongoDB, Firebase, Docker, Git, GitLab, Vitest, PyTorch" />
+  <img src="https://skillicons.dev/icons?i=ts,js,py,java,c,cpp,cs,r,matlab,html,css&theme=dark" alt="Languages: TypeScript, JavaScript, Python, Java, C, C++, C#, R, MATLAB, HTML, CSS" /><br/>
+  <img src="https://skillicons.dev/icons?i=react,nodejs,express,django,flask,spring,tailwind,bootstrap,vite&theme=dark" alt="Frameworks: React, Node.js, Express, Django, Flask, Spring Boot, Tailwind, Bootstrap, Vite" /><br/>
+  <img src="https://skillicons.dev/icons?i=postgres,sqlite,mongodb,firebase,docker,githubactions,nginx,gcp,linux&theme=dark" alt="Data, DevOps and cloud: PostgreSQL, SQLite, MongoDB, Firebase, Docker, GitHub Actions, Nginx, Google Cloud, Linux" /><br/>
+  <img src="https://skillicons.dev/icons?i=git,gitlab,vitest,pytorch&theme=dark" alt="Tooling: Git, GitLab, Vitest, PyTorch" />
 </p>
 
 <p>
@@ -77,6 +94,10 @@ When I'm not at a keyboard, I'm under a barbell. I'm a recipient of the **SFU Re
 </p>
 
 **Pit-wall specialties:** caching · code splitting · rate limiting · request deduplication · exponential backoff · stream cancellation · latency and token observability
+
+**Crew skills:** technical support · customer service and escalations · POS and cash handling · training and mentoring · event coordination · Excel reporting
+
+**Licences:** BCRPA Personal Training · Red Cross Standard First Aid & CPR · LinkedIn Learning Python · Cybersecurity Certificate &nbsp;|&nbsp; **Languages:** English, Hindi, Gujarati, Sindhi, French (beginner–intermediate), Spanish (beginner)
 
 ## 📡 Telemetry
 
