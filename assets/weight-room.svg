@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="t">
-  <title id="t">The weight room: a barbell loads up and lifts. Coding personal records: best day 14 contributions, longest streak 5 days.</title>
+  <title id="t">The weight room: a barbell loads up and lifts. Coding personal records: best day 16 contributions, longest streak 6 days.</title>
   <defs>
     <clipPath id="frame"><rect width="1200" height="300" rx="16"/></clipPath>
     <style>
@@ -39,22 +39,22 @@
     <text class="mono" x="652" y="70" font-size="12" fill="#e10600" letter-spacing="2">THE OTHER KIND OF PR · ONE REP = ONE CONTRIBUTION</text>
     <g class="row" style="animation-delay:1s">
       <text class="mono" x="650" y="108" font-size="12" fill="#9a9aab" letter-spacing="1.5">HEAVIEST SESSION · BEST DAY</text>
-      <text class="mono" x="1168" y="108" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">14 reps · Oct 23</text>
+      <text class="mono" x="1168" y="108" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">16 reps · May 2</text>
       <line x1="650" x2="1168" y1="122" y2="122" stroke="#262633"/>
     </g>
 <g class="row" style="animation-delay:1.1s">
       <text class="mono" x="650" y="152" font-size="12" fill="#9a9aab" letter-spacing="1.5">LONGEST STREAK · NO REST DAYS</text>
-      <text class="mono" x="1168" y="152" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">5 days</text>
+      <text class="mono" x="1168" y="152" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">6 days</text>
       <line x1="650" x2="1168" y1="166" y2="166" stroke="#262633"/>
     </g>
 <g class="row" style="animation-delay:1.2s">
       <text class="mono" x="650" y="196" font-size="12" fill="#9a9aab" letter-spacing="1.5">TRAINING DAYS · 12M</text>
-      <text class="mono" x="1168" y="196" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">16</text>
+      <text class="mono" x="1168" y="196" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">31</text>
       <line x1="650" x2="1168" y1="210" y2="210" stroke="#262633"/>
     </g>
 <g class="row" style="animation-delay:1.3s">
       <text class="mono" x="650" y="240" font-size="12" fill="#9a9aab" letter-spacing="1.5">AVG REPS PER SESSION</text>
-      <text class="mono" x="1168" y="240" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">4.6</text>
+      <text class="mono" x="1168" y="240" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">4.5</text>
       <line x1="650" x2="1168" y1="254" y2="254" stroke="#262633"/>
     </g>
     <text class="mono" x="650" y="282" font-size="12" fill="#6b6b7b">// progressive overload, applied to code</text>

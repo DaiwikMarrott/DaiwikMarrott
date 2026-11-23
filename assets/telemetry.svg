@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="316" viewBox="0 0 1200 316" role="img" aria-labelledby="t">
-  <title id="t">GitHub telemetry for DaiwikMarrott: 73 contributions in the last year, top languages TypeScript, JavaScript, HTML, CSS, Java, Other.</title>
+  <title id="t">GitHub telemetry for DaiwikMarrott: 140 contributions in the last year, top languages TypeScript, CSS, JavaScript, HTML, Java, Other.</title>
   <defs>
     <clipPath id="frame"><rect width="1200" height="316" rx="16"/></clipPath>
     <linearGradient id="trace" x1="0" y1="0" x2="0" y2="1">
@@ -28,27 +28,27 @@
     <g class="row" style="animation-delay:0.1s">
       <rect x="32" y="70" width="4" height="28" fill="#a855f7"/>
       <text class="mono" x="48" y="90" font-size="12" fill="#9a9aab" letter-spacing="1">CONTRIBUTIONS · 12M</text>
-      <text class="mono" x="388" y="90" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">73</text>
+      <text class="mono" x="388" y="90" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">140</text>
     </g>
 <g class="row" style="animation-delay:0.18s">
       <rect x="32" y="106" width="4" height="28" fill="#00d26a"/>
       <text class="mono" x="48" y="126" font-size="12" fill="#9a9aab" letter-spacing="1">COMMITS</text>
-      <text class="mono" x="388" y="126" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">67</text>
+      <text class="mono" x="388" y="126" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">130</text>
     </g>
 <g class="row" style="animation-delay:0.26s">
       <rect x="32" y="142" width="4" height="28" fill="#a855f7"/>
       <text class="mono" x="48" y="162" font-size="12" fill="#9a9aab" letter-spacing="1">FASTEST LAP · BEST WEEK</text>
-      <text class="mono" x="388" y="162" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">24</text>
+      <text class="mono" x="388" y="162" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">30</text>
     </g>
 <g class="row" style="animation-delay:0.33999999999999997s">
       <rect x="32" y="178" width="4" height="28" fill="#ffd12e"/>
       <text class="mono" x="48" y="198" font-size="12" fill="#9a9aab" letter-spacing="1">DAYS ON TRACK · 12M</text>
-      <text class="mono" x="388" y="198" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">16</text>
+      <text class="mono" x="388" y="198" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">31</text>
     </g>
 <g class="row" style="animation-delay:0.42000000000000004s">
       <rect x="32" y="214" width="4" height="28" fill="#f2f2f2"/>
       <text class="mono" x="48" y="234" font-size="12" fill="#9a9aab" letter-spacing="1">PUBLIC REPOS</text>
-      <text class="mono" x="388" y="234" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">8</text>
+      <text class="mono" x="388" y="234" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">9</text>
     </g>
 <g class="row" style="animation-delay:0.5s">
       <rect x="32" y="250" width="4" height="28" fill="#f2f2f2"/>
@@ -57,32 +57,32 @@
     </g>
     <text class="mono" x="470" y="42" font-size="12" fill="#9a9aab" letter-spacing="2">SPEED TRACE · WEEKLY CONTRIBUTIONS · LAST 52 WEEKS</text>
     <line x1="470" x2="1168" y1="70" y2="70" stroke="#262633" stroke-dasharray="2 6"/><line x1="470" x2="1168" y1="110" y2="110" stroke="#262633" stroke-dasharray="2 6"/><line x1="470" x2="1168" y1="150" y2="150" stroke="#262633" stroke-dasharray="2 6"/><line x1="470" x2="1168" y1="190" y2="190" stroke="#262633" stroke-dasharray="2 6"/>
-    <path class="area" d="M470,190 L470.0,190.0 L483.4,190.0 L496.8,190.0 L510.3,190.0 L523.7,190.0 L537.1,190.0 L550.5,190.0 L564.0,190.0 L577.4,190.0 L590.8,190.0 L604.2,190.0 L617.7,190.0 L631.1,190.0 L644.5,190.0 L657.9,190.0 L671.3,190.0 L684.8,190.0 L698.2,190.0 L711.6,190.0 L725.0,190.0 L738.5,190.0 L751.9,190.0 L765.3,190.0 L778.7,190.0 L792.2,190.0 L805.6,190.0 L819.0,190.0 L832.4,190.0 L845.8,190.0 L859.3,190.0 L872.7,190.0 L886.1,190.0 L899.5,190.0 L913.0,190.0 L926.4,190.0 L939.8,190.0 L953.2,160.0 L966.7,175.0 L980.1,190.0 L993.5,190.0 L1006.9,190.0 L1020.3,190.0 L1033.8,190.0 L1047.2,190.0 L1060.6,190.0 L1074.0,190.0 L1087.5,135.0 L1100.9,120.0 L1114.3,70.0 L1127.7,190.0 L1141.2,185.0 L1154.6,120.0 L1168.0,190.0 L1168,190 Z" fill="url(#trace)"/>
-    <polyline class="line" pathLength="1" points="470.0,190.0 483.4,190.0 496.8,190.0 510.3,190.0 523.7,190.0 537.1,190.0 550.5,190.0 564.0,190.0 577.4,190.0 590.8,190.0 604.2,190.0 617.7,190.0 631.1,190.0 644.5,190.0 657.9,190.0 671.3,190.0 684.8,190.0 698.2,190.0 711.6,190.0 725.0,190.0 738.5,190.0 751.9,190.0 765.3,190.0 778.7,190.0 792.2,190.0 805.6,190.0 819.0,190.0 832.4,190.0 845.8,190.0 859.3,190.0 872.7,190.0 886.1,190.0 899.5,190.0 913.0,190.0 926.4,190.0 939.8,190.0 953.2,160.0 966.7,175.0 980.1,190.0 993.5,190.0 1006.9,190.0 1020.3,190.0 1033.8,190.0 1047.2,190.0 1060.6,190.0 1074.0,190.0 1087.5,135.0 1100.9,120.0 1114.3,70.0 1127.7,190.0 1141.2,185.0 1154.6,120.0 1168.0,190.0" fill="none" stroke="#ff2a1f" stroke-width="2.5" stroke-linejoin="round"/>
+    <path class="area" d="M470,190 L470.0,190.0 L483.4,190.0 L496.8,190.0 L510.3,190.0 L523.7,190.0 L537.1,190.0 L550.5,190.0 L564.0,190.0 L577.4,190.0 L590.8,190.0 L604.2,190.0 L617.7,190.0 L631.1,190.0 L644.5,190.0 L657.9,190.0 L671.3,190.0 L684.8,190.0 L698.2,190.0 L711.6,190.0 L725.0,190.0 L738.5,190.0 L751.9,190.0 L765.3,70.0 L778.7,190.0 L792.2,170.0 L805.6,190.0 L819.0,190.0 L832.4,190.0 L845.8,190.0 L859.3,154.0 L872.7,166.0 L886.1,130.0 L899.5,186.0 L913.0,190.0 L926.4,190.0 L939.8,190.0 L953.2,166.0 L966.7,178.0 L980.1,190.0 L993.5,190.0 L1006.9,190.0 L1020.3,190.0 L1033.8,190.0 L1047.2,190.0 L1060.6,190.0 L1074.0,190.0 L1087.5,146.0 L1100.9,134.0 L1114.3,94.0 L1127.7,190.0 L1141.2,186.0 L1154.6,134.0 L1168.0,186.0 L1168,190 Z" fill="url(#trace)"/>
+    <polyline class="line" pathLength="1" points="470.0,190.0 483.4,190.0 496.8,190.0 510.3,190.0 523.7,190.0 537.1,190.0 550.5,190.0 564.0,190.0 577.4,190.0 590.8,190.0 604.2,190.0 617.7,190.0 631.1,190.0 644.5,190.0 657.9,190.0 671.3,190.0 684.8,190.0 698.2,190.0 711.6,190.0 725.0,190.0 738.5,190.0 751.9,190.0 765.3,70.0 778.7,190.0 792.2,170.0 805.6,190.0 819.0,190.0 832.4,190.0 845.8,190.0 859.3,154.0 872.7,166.0 886.1,130.0 899.5,186.0 913.0,190.0 926.4,190.0 939.8,190.0 953.2,166.0 966.7,178.0 980.1,190.0 993.5,190.0 1006.9,190.0 1020.3,190.0 1033.8,190.0 1047.2,190.0 1060.6,190.0 1074.0,190.0 1087.5,146.0 1100.9,134.0 1114.3,94.0 1127.7,190.0 1141.2,186.0 1154.6,134.0 1168.0,186.0" fill="none" stroke="#ff2a1f" stroke-width="2.5" stroke-linejoin="round"/>
     <text class="mono" x="470" y="222" font-size="12" fill="#9a9aab" letter-spacing="2">TYRE STRATEGY · TOP LANGUAGES BY CODE</text>
     <g class="stint" style="animation-delay:0.9s">
-      <rect x="470.0" y="232" width="501.2" height="14" rx="3" fill="#ff2a1f"/>
-      <text class="mono" x="470" y="270" font-size="12" fill="#d8d8e0"><tspan fill="#ff2a1f" font-weight="700">S</tspan> TypeScript 72.2%</text>
+      <rect x="470.0" y="232" width="524.2" height="14" rx="3" fill="#ff2a1f"/>
+      <text class="mono" x="470" y="270" font-size="12" fill="#d8d8e0"><tspan fill="#ff2a1f" font-weight="700">S</tspan> TypeScript 75.5%</text>
     </g>
 <g class="stint" style="animation-delay:1.02s">
-      <rect x="974.2" y="232" width="87.9" height="14" rx="3" fill="#ffd12e"/>
-      <text class="mono" x="703" y="270" font-size="12" fill="#d8d8e0"><tspan fill="#ffd12e" font-weight="700">M</tspan> JavaScript 13.0%</text>
+      <rect x="997.2" y="232" width="81.9" height="14" rx="3" fill="#ffd12e"/>
+      <text class="mono" x="703" y="270" font-size="12" fill="#d8d8e0"><tspan fill="#ffd12e" font-weight="700">M</tspan> CSS 12.2%</text>
     </g>
 <g class="stint" style="animation-delay:1.1400000000000001s">
-      <rect x="1065.0" y="232" width="47.5" height="14" rx="3" fill="#f2f2f2"/>
-      <text class="mono" x="936" y="270" font-size="12" fill="#d8d8e0"><tspan fill="#f2f2f2" font-weight="700">H</tspan> HTML 7.2%</text>
+      <rect x="1082.1" y="232" width="44.6" height="14" rx="3" fill="#f2f2f2"/>
+      <text class="mono" x="936" y="270" font-size="12" fill="#d8d8e0"><tspan fill="#f2f2f2" font-weight="700">H</tspan> JavaScript 6.8%</text>
     </g>
 <g class="stint" style="animation-delay:1.26s">
-      <rect x="1115.6" y="232" width="23.2" height="14" rx="3" fill="#39d353"/>
-      <text class="mono" x="470" y="290" font-size="12" fill="#d8d8e0"><tspan fill="#39d353" font-weight="700">I</tspan> CSS 3.8%</text>
+      <rect x="1129.6" y="232" width="22.4" height="14" rx="3" fill="#39d353"/>
+      <text class="mono" x="470" y="290" font-size="12" fill="#d8d8e0"><tspan fill="#39d353" font-weight="700">I</tspan> HTML 3.6%</text>
     </g>
 <g class="stint" style="animation-delay:1.38s">
-      <rect x="1141.8" y="232" width="22.0" height="14" rx="3" fill="#2f80ff"/>
-      <text class="mono" x="703" y="290" font-size="12" fill="#d8d8e0"><tspan fill="#2f80ff" font-weight="700">W</tspan> Java 3.6%</text>
+      <rect x="1155.0" y="232" width="9.4" height="14" rx="3" fill="#2f80ff"/>
+      <text class="mono" x="703" y="290" font-size="12" fill="#d8d8e0"><tspan fill="#2f80ff" font-weight="700">W</tspan> Java 1.8%</text>
     </g>
 <g class="stint" style="animation-delay:1.5s">
-      <rect x="1166.8" y="232" width="1.0" height="14" rx="3" fill="#6b6b7b"/>
-      <text class="mono" x="936" y="290" font-size="12" fill="#d8d8e0"><tspan fill="#6b6b7b" font-weight="700">–</tspan> Other 0.2%</text>
+      <rect x="1167.4" y="232" width="1.0" height="14" rx="3" fill="#6b6b7b"/>
+      <text class="mono" x="936" y="290" font-size="12" fill="#d8d8e0"><tspan fill="#6b6b7b" font-weight="700">–</tspan> Other 0.1%</text>
     </g>
   </g>
 </svg>
